@@ -841,9 +841,6 @@
     <div class="particles" id="particles"></div>
 
     <!-- AUDIO ELEMENTOS -->
-    <audio id="pianoAudio" loop>
-        <source src="./assets/lofi.mp3" type="audio/mpeg">
-    </audio>
     <audio id="lofiAudio" loop>
         <source src="./assets/lofi.mp3" type="audio/mpeg">
     </audio>
@@ -1038,10 +1035,10 @@
             document.getElementById('galleryContainer').classList.remove('active');
             document.getElementById('password').value = '';
 
-             // Cambiar música: detener lofi, iniciar piano
+            /*  // Cambiar música: detener lofi, iniciar piano
             document.getElementById('lofiAudio').pause();
             document.getElementById('lofiAudio').currentTime = 0;
-            document.getElementById('pianoAudio').play();
+            document.getElementById('pianoAudio').play(); */
         }
 
         document.getElementById('heartContainer').addEventListener('mouseenter', crearCorazonesFlotantes);
@@ -1053,10 +1050,10 @@
             if (password.toLowerCase() === 'helado') {
                 crearCorazonesFlotantes();
 
-                // Cambiar música: detener piano, iniciar lofi
+                /* // Cambiar música: detener piano, iniciar lofi
                 document.getElementById('pianoAudio').pause();
                 document.getElementById('pianoAudio').currentTime = 0;
-                document.getElementById('lofiAudio').play();
+                document.getElementById('lofiAudio').play(); */
 
                 setTimeout(() => {
                     document.getElementById('heartContainer').style.display = 'none';
@@ -1071,7 +1068,7 @@
 
         window.addEventListener('load', () => {
             crearParticulas();
-            document.getElementById('pianoAudio').play();
+            document.getElementById('lofiAudio').play();
         });
     </script>
 </body>
